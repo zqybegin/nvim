@@ -9,20 +9,20 @@ vim.cmd.packadd('packer.nvim')
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+
   -- theme
   use({ 'rose-pine/neovim', as = 'rose-pine' })
-  -- filo tree
-  use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-          'nvim-tree/nvim-web-devicons', -- optional
-      },
-  }
-  -- telescope to fuzzy find
-  use {
-	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-	  requires = { {'nvim-lua/plenary.nvim'} }
-  }
+
+  -- Plugins
+  use "nvim-lua/plenary.nvim"       -- Useful lua functions used ny lots of plugins
+  use 'nvim-tree/nvim-tree.lua'     -- file tree
+  use 'nvim-tree/nvim-web-devicons' -- file tree icon
+  use "nvim-telescope/telescope.nvim" -- fuzzy find
+  use 'folke/which-key.nvim'        -- help to remember the meaning of key 
+  use 'yamatsum/nvim-cursorline'    -- underline the word under the cursor 
+  use 'numToStr/Comment.nvim'       -- comment
+  use 'gelguy/wilder.nvim'          -- cmd autocompletion 
+  use 'romgrk/fzy-lua-native'       -- used by wilder.nvim highlight 
 
   -- treesitter
   use {
@@ -32,12 +32,9 @@ return require('packer').startup(function(use)
           ts_update()
       end,
   }
-  -- View treesitter information directly
-  use("nvim-treesitter/playground")
-  -- highlight code based on treesitter
-  use("nvim-treesitter/nvim-treesitter-context");
-  -- smart to record undo list
-  use("mbbill/undotree")
+  use "nvim-treesitter/playground"  -- View treesitter information directly
+  use "nvim-treesitter/nvim-treesitter-context"  -- highlight code based on treesitter
+  use "mbbill/undotree"  -- smart to record undo list
 
 
   -- lsp-zero
@@ -63,9 +60,5 @@ return require('packer').startup(function(use)
           {'rafamadriz/friendly-snippets'},
       }
   }
-  use { "folke/which-key.nvim" }      -- help to remember the meaning of key 
-  use { "yamatsum/nvim-cursorline" }  -- underline the word under the cursor 
-  use { "numToStr/Comment.nvim" }     -- comment
-
-end)
+  end)
 
