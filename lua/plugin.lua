@@ -11,11 +11,19 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- theme
   use({ 'rose-pine/neovim', as = 'rose-pine' })
+  -- filo tree
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional
+      },
+  }
   -- telescope to fuzzy find
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
+
   -- treesitter
   use {
       'nvim-treesitter/nvim-treesitter',
@@ -28,10 +36,10 @@ return require('packer').startup(function(use)
   use("nvim-treesitter/playground")
   -- highlight code based on treesitter
   use("nvim-treesitter/nvim-treesitter-context");
-  -- tab consule
-  use("theprimeagen/harpoon")
   -- smart to record undo list
   use("mbbill/undotree")
+
+
   -- lsp-zero
   use   {
       'VonHeikemen/lsp-zero.nvim',
@@ -55,19 +63,9 @@ return require('packer').startup(function(use)
           {'rafamadriz/friendly-snippets'},
       }
   }
-  -- which-key
-  use {
-      "folke/which-key.nvim",
-      config = function()
-          vim.o.timeout = true
-          vim.o.timeoutlen = 300
-          require("which-key").setup {
-              -- your configuration comes here
-              -- or leave it empty to use the default settings
-              -- refer to the configuration section below
-          }
-      end
-  }
+  use { "folke/which-key.nvim" }      -- help to remember the meaning of key 
+  use { "yamatsum/nvim-cursorline" }  -- underline the word under the cursor 
+  use { "numToStr/Comment.nvim" }     -- comment
 
 end)
 

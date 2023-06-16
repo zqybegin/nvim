@@ -29,3 +29,5 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = ""
 
+-- copy to system clipborad
+vim.opt.clipboard = "unnamedplus"
