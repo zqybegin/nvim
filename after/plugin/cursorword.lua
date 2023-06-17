@@ -1,4 +1,10 @@
-require('nvim-cursorline').setup {
+-- if plugin isn't loaded, only return and don't report error
+local status_ok, cursorline = pcall(require, 'nvim-cursorline')
+if not status_ok then
+    return
+end
+
+cursorline.setup {
   cursorline = {
     enable = true,
     timeout = 1000,
