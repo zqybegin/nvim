@@ -27,7 +27,10 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = ""
-
 -- copy to system clipborad
 vim.opt.clipboard = "unnamedplus"
+
+-- set '-' '<' '>' as a letter
+vim.cmd [[set iskeyword+=-]]
+vim.cmd [[set iskeyword+=<]]
+vim.cmd [[set iskeyword+=>]]
