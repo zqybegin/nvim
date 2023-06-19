@@ -1,4 +1,3 @@
 * null ls
-* when cusror on the problem line, troggle not <leader>k
-* make key into whichkey, cancel buffer
 * open so slow
+* add all key to a table
