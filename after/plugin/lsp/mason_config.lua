@@ -14,20 +14,15 @@ end
 
 local servers = {
     "lua_ls",
-    "pyright",
-    "jsonls",
+    "svlangserver",
 }
 
 mason_lspconfig.setup({
     -- A list of servers to automatically install if they're not already installed.
-    ensure_installed = {
-        "lua_ls",
-        "pyright",
-        "jsonls",
-    },
+    ensure_installed = servers,
 
     -- Whether servers that are set up (via lspconfig) should be automatically installed if they're not already installed.
-   automatic_installation = true,
+    automatic_installation = true,
 
     -- See `:h mason-lspconfig.setup_handlers()`
     handlers = nil,

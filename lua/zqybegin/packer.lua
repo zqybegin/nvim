@@ -48,26 +48,15 @@ return packer.startup(function(use)
     -- Plugins
     use "nvim-lua/popup.nvim"         -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim"       -- Useful lua functions used ny lots of plugins
+    use 'lilydjwg/colorizer'          -- show color from hex
 
     use 'nvim-tree/nvim-tree.lua'     -- file tree
     use 'nvim-tree/nvim-web-devicons' -- file tree icon
-    use "nvim-telescope/telescope.nvim" -- fuzzy find
     use 'folke/which-key.nvim'        -- help to remember the meaning of key 
     use 'yamatsum/nvim-cursorline'    -- underline the word under the cursor 
     use 'numToStr/Comment.nvim'       -- comment
     use 'gelguy/wilder.nvim'          -- cmd autocompletion 
     use 'romgrk/fzy-lua-native'       -- used by wilder.nvim highlight 
-
-    -- treesitter
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
-    }
-    use "nvim-treesitter/nvim-treesitter-context"   -- highlight code based on treesitter
-    use "mbbill/undotree"                           -- smart to record undo list
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp"          -- The completion plugin
@@ -87,6 +76,17 @@ return packer.startup(function(use)
     use "williamboman/mason.nvim"           -- simple to use language server installer
     use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
     use 'jose-elias-alvarez/null-ls.nvim'   -- LSP diagnostics and code actions
+
+    -- telescope
+    use "nvim-telescope/telescope.nvim"             -- fuzzy find
+    use 'nvim-telescope/telescope-media-files.nvim' -- Preview images... in telescope
+
+    -- Treesitter
+    use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate",}
+    use "p00f/nvim-ts-rainbow"                      -- show rainbow color
+    use "nvim-treesitter/nvim-treesitter-context"   -- highlight code based on treesitter
+    use "mbbill/undotree"                           -- smart to record undo list
+
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
