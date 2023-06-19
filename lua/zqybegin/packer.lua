@@ -19,7 +19,7 @@ end
 vim.cmd [[
     augroup packer_user_config
         autocmd!
-        autocmd BufWritePost plugin.lua source <afile> | PackerSync
+        autocmd BufWritePost packer.lua source <afile> | PackerSync
     augroup end
 ]]
 
@@ -66,34 +66,27 @@ return packer.startup(function(use)
             ts_update()
         end,
     }
-    use "nvim-treesitter/playground"  -- View treesitter information directly
-    use "nvim-treesitter/nvim-treesitter-context"  -- highlight code based on treesitter
-    use "mbbill/undotree"  -- smart to record undo list
+    use "nvim-treesitter/nvim-treesitter-context"   -- highlight code based on treesitter
+    use "mbbill/undotree"                           -- smart to record undo list
 
+    -- cmp plugins
+    use "hrsh7th/nvim-cmp"          -- The completion plugin
+    use "hrsh7th/cmp-buffer"        -- source of buffer completions
+    use "hrsh7th/cmp-path"          -- source of path completions
+    use "hrsh7th/cmp-cmdline"       -- source of cmdline completions
+    use "saadparwaiz1/cmp_luasnip"  -- source of snippet completions
+    use "hrsh7th/cmp-nvim-lsp"      -- source of lsp completions 
+    use "hrsh7th/cmp-nvim-lua"      -- source of nvim config completions
 
-    -- lsp-zero
-    use   {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v2.x',
-        requires = {
-            -- LSP Support
-            {'neovim/nvim-lspconfig'},
-            {'williamboman/mason.nvim'},
-            {'williamboman/mason-lspconfig.nvim'},
+    -- snippets
+    use "L3MON4D3/LuaSnip"              --snippet engine
+    use "rafamadriz/friendly-snippets"  -- a bunch of snippets to use
 
-            -- Autocompletion
-            {'hrsh7th/nvim-cmp'},
-            {'hrsh7th/cmp-buffer'},
-            {'hrsh7th/cmp-path'},
-            {'saadparwaiz1/cmp_luasnip'},
-            {'hrsh7th/cmp-nvim-lsp'},
-            {'hrsh7th/cmp-nvim-lua'},
-
-            -- Snippets
-            {'L3MON4D3/LuaSnip'},
-            {'rafamadriz/friendly-snippets'},
-        }
-    }
+    -- LSP
+    use "neovim/nvim-lspconfig"             -- enable LSP
+    use "williamboman/mason.nvim"           -- simple to use language server installer
+    use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
+    use 'jose-elias-alvarez/null-ls.nvim'   -- LSP diagnostics and code actions
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
