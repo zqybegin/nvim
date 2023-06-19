@@ -9,7 +9,16 @@ vim.g.mapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
----------------------- Normal Mode ----------------------
+-- replace the action of "p" with "P"
+vim.keymap.set('', 'p', 'P', { noremap = true })
+vim.keymap.set('', 'P', 'p', { noremap = true })
+
+-- smart copy
+vim.keymap.set("v", "p", '"_dP')
+
+-- cancel q: to open command-line window 
+vim.keymap.set("n", "q:" ,":q<CR>")
+
 -- use q to quit neovim
 vim.keymap.set("n", "q" ,"<cmd>q<CR>")
 
@@ -59,10 +68,6 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 -- add exe to this file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
----------------------- Visual Mode ----------------------
--- smart copy
-vim.keymap.set("v", "p", '"_dp')
 
 -- move code block in visual mode
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

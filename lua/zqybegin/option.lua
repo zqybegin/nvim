@@ -34,3 +34,4 @@ vim.opt.clipboard = "unnamedplus"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set iskeyword+=<]]
 vim.cmd [[set iskeyword+=>]]
+

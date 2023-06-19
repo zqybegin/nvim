@@ -26,7 +26,11 @@ treesitter.setup {
         additional_vim_regex_highlighting = true,
     },
 
-
+    -- Plugin nvim-autopairs needed
+    autopairs = {
+        enable = true,
+    },
+    -- Plugin nvim-ts-rainbow needed
     rainbow = {
         enable = true,
         -- disable = { "jsx", "cpp" }, list of languages you want to disable the plugin for

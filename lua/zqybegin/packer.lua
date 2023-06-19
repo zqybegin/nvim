@@ -40,23 +40,26 @@ packer.init {
 }
 
 return packer.startup(function(use)
-    use 'wbthomason/packer.nvim'      -- Packer can manage itself
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
 
     -- theme
     use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     -- Plugins
-    use "nvim-lua/popup.nvim"         -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim"       -- Useful lua functions used ny lots of plugins
-    use 'lilydjwg/colorizer'          -- show color from hex
+    use "nvim-lua/popup.nvim"   -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+    use 'lilydjwg/colorizer'    -- show color from hex
+    use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+
+    use 'folke/which-key.nvim'     -- help to remember the meaning of key 
+    use 'yamatsum/nvim-cursorline' -- underline the word under the cursor 
+    use 'numToStr/Comment.nvim'    -- comment
+    use 'gelguy/wilder.nvim'       -- cmd autocompletion 
+    use 'romgrk/fzy-lua-native'    -- used by wilder.nvim highlight 
 
     use 'nvim-tree/nvim-tree.lua'     -- file tree
     use 'nvim-tree/nvim-web-devicons' -- file tree icon
-    use 'folke/which-key.nvim'        -- help to remember the meaning of key 
-    use 'yamatsum/nvim-cursorline'    -- underline the word under the cursor 
-    use 'numToStr/Comment.nvim'       -- comment
-    use 'gelguy/wilder.nvim'          -- cmd autocompletion 
-    use 'romgrk/fzy-lua-native'       -- used by wilder.nvim highlight 
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp"          -- The completion plugin
@@ -86,7 +89,6 @@ return packer.startup(function(use)
     use "p00f/nvim-ts-rainbow"                      -- show rainbow color
     use "nvim-treesitter/nvim-treesitter-context"   -- highlight code based on treesitter
     use "mbbill/undotree"                           -- smart to record undo list
-
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
