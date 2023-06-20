@@ -33,9 +33,9 @@ which_key.setup{
     },
 }
 
-local leader_mapping = {
+which_key.register({
     ["u"]  = {"<cmd>UndotreeToggle<CR>", "UndoTree"},
-    ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], "Replace"},
+    ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]], "Amazing Replace"},
     ["w"] = { "<cmd>w<CR><cmd>so<CR>","Wirte and Source this file" },
     ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>","spilt vertically and fuzzy find"},
     ["i"] = { "<cmd>IconPickerNormal<cr>","insert text icon"},
@@ -66,18 +66,17 @@ local leader_mapping = {
     ["k"] = { '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', "prev diagnostic"},
     ["o"] = { '<cmd>lua vim.diagnostic.open_float()<CR>', "open diagnostic"},
     -- ["s"] = { "<cmd>lua vim.diagnostic.setloclist()<CR>", "save to location list"},
-}
-
-local leader_opts = {
+},{
     mode = "n", -- NORMAL mode
     prefix = "<leader>",
     buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
     silent = false, -- use `silent` when creating keymaps
     noremap = true, -- use `noremap` when creating keymaps
     nowait = true, -- use `nowait` when creating keymaps
-}
 
-local mapping = {
+})
+
+which_key.register({
     g = {
         name = "goto funciton",
         d = {"<cmd>lua vim.lsp.buf.definition()<cr>", "goto function definition"},
@@ -87,16 +86,23 @@ local mapping = {
     },
     K = {"<cmd>lua vim.lsp.buf.hover()<cr>", "show diagnostic hover"},
     --vim.cmd [[ command! format execute 'lua vim.lsp.buf.formatting()' ]]
-}
-
-local opts = {
+},{
     mode = "n", -- NORMAL mode
     buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
     silent = true, -- use `silent` when creating keymaps
     noremap = true, -- use `noremap` when creating keymaps
     nowait = true, -- use `nowait` when creating keymaps
-}
+})
 
+which_key.register({
+    ["s"]  = {[["hy:%s/<C-r>h//gc<left><left><left>]], "Amazing Replace"},
+},{
+    mode = "v", -- NORMAL mode
+    prefix = "<leader>",
+    buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
+    silent = false, -- use `silent` when creating keymaps
+    noremap = true, -- use `noremap` when creating keymaps
+    nowait = true, -- use `nowait` when creating keymaps
 
-which_key.register(leader_mapping, leader_opts)
-which_key.register(mapping, opts)
+})
+

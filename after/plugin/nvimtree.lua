@@ -25,14 +25,13 @@ nvim_tree.setup {
     },
     renderer = {
         highlight_git = true,
-        root_folder_modifier = ":t",
         icons = {
             glyphs = {
                 default = "",
                 symlink = "",
                 git = {
                     unstaged = "✗",
-                    staged = "✗",
+                    staged = "✓",
                     unmerged = "",
                     renamed = "➜",
                     deleted = "",
@@ -48,5 +47,19 @@ nvim_tree.setup {
                 },
             }
         }
-    }
+    },
+    log = {
+        enable = true,
+        truncate = false,
+        types = {
+            all = false,
+            config = false,
+            copy_paste = false,
+            dev = false,
+            diagnostics = false,
+            git = false,
+            profile = false,
+            watcher = false,
+        },
+    },
 }
