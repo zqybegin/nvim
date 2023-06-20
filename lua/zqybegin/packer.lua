@@ -47,17 +47,20 @@ return packer.startup(function(use)
     use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     -- Plugins
-    use "nvim-lua/popup.nvim"   -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
-    use 'lilydjwg/colorizer'    -- show color from hex
-    use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
+    use "nvim-lua/popup.nvim"           -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/plenary.nvim"         -- Useful lua functions used ny lots of plugins
+    use 'lilydjwg/colorizer'            -- show color from hex
+    use 'ziontee113/icon-picker.nvim'   -- help you pick text icon
+    use "stevearc/dressing.nvim"        -- icon picker needed 
 
+    use "windwp/nvim-autopairs"    -- Autopairs, integrates with both cmp and treesitter
     use 'folke/which-key.nvim'     -- help to remember the meaning of key 
     use 'yamatsum/nvim-cursorline' -- underline the word under the cursor 
     use 'numToStr/Comment.nvim'    -- comment
     use 'gelguy/wilder.nvim'       -- cmd autocompletion 
     use 'romgrk/fzy-lua-native'    -- used by wilder.nvim highlight 
 
+    -- nvim tree
     use 'nvim-tree/nvim-tree.lua'     -- file tree
     use 'nvim-tree/nvim-web-devicons' -- file tree icon
 
