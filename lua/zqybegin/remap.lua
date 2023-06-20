@@ -17,7 +17,7 @@ vim.keymap.set('', 'P', 'p', { noremap = true })
 vim.keymap.set("v", "p", '"_dP')
 
 -- cancel q: to open command-line window 
-vim.keymap.set("n", "q:" ,":q<CR>")
+vim.keymap.set("n", "q:" ,"<nop>")
 
 -- use q to quit neovim
 vim.keymap.set("n", "q" ,"<cmd>q<CR>")

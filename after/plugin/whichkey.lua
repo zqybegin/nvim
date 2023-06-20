@@ -49,9 +49,19 @@ local leader_mapping = {
         o = { "<cmd>NvimTreeFindFile<cr>", "open file in dir" },
         t = { "<cmd>NvimTreeToggle<cr>", "toggle file tree" }
     },
-    -- Lsp
-    ["k"] = { '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', "next diagnostic"},
-    ["j"] = { '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', "prev diagnostic"},
+
+    -- Git:https://github.com/lewis6991/gitsigns.nvim#keymaps
+    g = {
+        name = "Git",
+        j = {'<cmd>Gitsigns next_hunk<CR>', "next change"},
+        k = {'<cmd>Gitsigns prev_hunk<CR>', "prev change"},
+        o = {'<cmd>Gitsigns preview_hunk<CR>', "open change"},
+        r = {'<cmd>Gitsigns reset_hunk<CR>', "reset change"},
+    },
+
+    -- LSP
+    ["j"] = { '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', "next diagnostic"},
+    ["k"] = { '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', "prev diagnostic"},
     ["o"] = { '<cmd>lua vim.diagnostic.open_float()<CR>', "open diagnostic"},
     -- ["s"] = { "<cmd>lua vim.diagnostic.setloclist()<CR>", "save to location list"},
 }
