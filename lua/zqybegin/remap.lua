@@ -12,7 +12,7 @@ vim.g.mapleader = " "
 -- move and delete buffer
 vim.keymap.set('n', '<C-h>', '<cmd>bp<CR>')
 vim.keymap.set('n', '<C-l>', '<cmd>bn<CR>')
-vim.keymap.set('n', '<C-q>', '<cmd>Bdelete<CR>')
+vim.keymap.set('n', '<C-q>', '<cmd>BufDel<CR>')
 
 -- replace the action of "p" with "P"
 vim.keymap.set('', 'p', 'P', { noremap = true })

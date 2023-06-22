@@ -1,4 +1,8 @@
 * null ls
 * open so slow
 * add all key to a table and Ctrl handle with buffer
-* bufferline color on tab
+
+* use voldikss/vim-floaterm
+* use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters 
+* use 'rhysd/git-messenger.vim' -- 利用 git blame 显示当前行的 commit message 
+* use 'mhinz/vim-startify' -- 启动界面

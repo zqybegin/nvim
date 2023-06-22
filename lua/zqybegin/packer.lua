@@ -41,35 +41,36 @@ packer.init {
 
 return packer.startup(function(use)
     -- Packer can manage itself
-    use 'wbthomason/packer.nvim'
+    use "wbthomason/packer.nvim"
 
     -- theme
-    use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use({ "rose-pine/neovim", as = "rose-pine" })
 
     -- basic plugins
     use "nvim-lua/popup.nvim"           -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim"         -- Useful lua functions used ny lots of plugins
-    use 'norcalli/nvim-colorizer.lua'   -- show color from hex
-    use 'ziontee113/icon-picker.nvim'   -- help you pick text icon
+    use "norcalli/nvim-colorizer.lua"   -- show color from hex
+    use "ziontee113/icon-picker.nvim"   -- help you pick text icon
     use "stevearc/dressing.nvim"        -- icon picker needed 
 
     -- useful plugin
     use "akinsho/toggleterm.nvim"  -- toggle and presist terminal 
     use "windwp/nvim-autopairs"    -- Autopairs, integrates with both cmp and treesitter
-    use 'folke/which-key.nvim'     -- help to remember the meaning of key 
-    use 'numToStr/Comment.nvim'    -- comment
-    use 'gelguy/wilder.nvim'       -- cmd autocompletion 
-    use 'romgrk/fzy-lua-native'    -- used by wilder.nvim highlight 
+    use "folke/which-key.nvim"     -- help to remember the meaning of key 
+    use "numToStr/Comment.nvim"    -- comment
+    use "gelguy/wilder.nvim"       -- cmd autocompletion 
+    use "romgrk/fzy-lua-native"    -- used by wilder.nvim highlight 
 
     -- editor plugin
-    use 'yamatsum/nvim-cursorline'  -- underline the word under the cursor 
+    use "yamatsum/nvim-cursorline"  -- underline the word under the cursor 
     use "lukas-reineke/indent-blankline.nvim"  -- show blankline
 
     -- nvim tree and bufferline
-    use 'nvim-tree/nvim-tree.lua'     -- file tree
-    use 'nvim-tree/nvim-web-devicons' -- file tree icon
+    use "nvim-tree/nvim-tree.lua"     -- file tree
+    use "nvim-tree/nvim-web-devicons" -- file tree icon
     use "akinsho/bufferline.nvim"     -- bufferline control
-    use "moll/vim-bbye"               -- used with bufferline
+    use "ojroques/nvim-bufdel"        -- close buffer gently
+    -- use "moll/vim-byye" will be comfict
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp"          -- The completion plugin
@@ -88,15 +89,15 @@ return packer.startup(function(use)
     use "neovim/nvim-lspconfig"             -- enable LSP
     use "williamboman/mason.nvim"           -- simple to use language server installer
     use "williamboman/mason-lspconfig.nvim" -- simple to use language server installer
-    use 'jose-elias-alvarez/null-ls.nvim'   -- LSP diagnostics and code actions
+    use "jose-elias-alvarez/null-ls.nvim"   -- LSP diagnostics and code actions
 
     -- telescope
     use "nvim-telescope/telescope.nvim"             -- fuzzy find
-    use 'nvim-telescope/telescope-media-files.nvim' -- Preview images... in telescope
+    use "nvim-telescope/telescope-media-files.nvim" -- Preview images... in telescope
 
     -- Treesitter
     use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate",}
-    -- use "p00f/nvim-ts-rainbow"                      -- show rainbow color
+    use "p00f/nvim-ts-rainbow"                      -- show rainbow color
     use "nvim-treesitter/nvim-treesitter-context"   -- highlight code based on treesitter
     use "mbbill/undotree"                           -- smart to record undo list
 

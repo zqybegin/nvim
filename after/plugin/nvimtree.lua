@@ -10,7 +10,7 @@ nvim_tree.setup {
     hijack_netrw = true,
     update_cwd = true,
     view = {
-        centralize_selection = true,
+        centralize_selection = false,
         cursorline = true,
         debounce_delay = 15,
         width = 30,
