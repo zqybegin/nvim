@@ -37,19 +37,23 @@ which_key.register({
     ["u"]  = {"<cmd>UndotreeToggle<CR>", "UndoTree"},
     ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]], "Amazing Replace"},
     ["w"] = { "<cmd>w<CR><cmd>so<CR>","Wirte and Source this file" },
-    ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>","spilt vertically and fuzzy find"},
-    ["i"] = { "<cmd>IconPickerNormal<cr>","insert text icon"},
+    ["i"] = { "<cmd>IconPickerNormal<CR>","insert text icon"},
     ["q"] = { "<cmd>xa<CR>","exit nvim"},
+    v = {
+        name = "vertically spilt",
+        f = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>","open file"},
+        h = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope help_tags<CR>","open file"},
+    };
     p = {
         name = "Fuzzy find",
-        f = { "<cmd>Telescope find_files<cr>", "Search Files" },
+        f = { "<cmd>Telescope find_files<CR>", "Search Files" },
         s = { function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })end, "Search Symbol" },
-        h = { "<cmd>Telescope help_tags<cr>", "Search Vim Manual" },
+        h = { "<cmd>Telescope help_tags<CR>", "Search Vim Manual" },
     },
     f = {
         name = "file tree",
-        o = { "<cmd>NvimTreeFindFile<cr>", "open file in dir" },
-        t = { "<cmd>NvimTreeToggle<cr>", "toggle file tree" }
+        o = { "<cmd>NvimTreeFindFile<CR>", "open file in dir" },
+        t = { "<cmd>NvimTreeToggle<CR>", "toggle file tree" }
     },
 
     -- Git:https://github.com/lewis6991/gitsigns.nvim#keymaps
@@ -61,8 +65,8 @@ which_key.register({
         r = {'<cmd>Gitsigns reset_hunk<CR>', "reset change"},
     },
 
-    -- LSP
-    ["j"] = { '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', "next diagnostic"},
+    -- LSP control
+    ["j"] = { '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<cCR>', "next diagnostic"},
     ["k"] = { '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', "prev diagnostic"},
     ["o"] = { '<cmd>lua vim.diagnostic.open_float()<CR>', "open diagnostic"},
     -- ["s"] = { "<cmd>lua vim.diagnostic.setloclist()<CR>", "save to location list"},
@@ -79,12 +83,12 @@ which_key.register({
 which_key.register({
     g = {
         name = "goto funciton",
-        d = {"<cmd>lua vim.lsp.buf.definition()<cr>", "goto function definition"},
-        D = {"<cmd>lua vim.lsp.buf.declaration()<cr>", "goto function declaration"},
-        i = {"<cmd>lua vim.lsp.buf.implementation()<cr>", "goto function implementation"},
-        r = {"<cmd>lua vim.lsp.buf.references()<cr>", "goto function references"},
+        d = {"<cmd>lua vim.lsp.buf.definition()<CR>", "goto function definition"},
+        D = {"<cmd>lua vim.lsp.buf.declaration()<CR>", "goto function declaration"},
+        i = {"<cmd>lua vim.lsp.buf.implementation()<CR>", "goto function implementation"},
+        r = {"<cmd>lua vim.lsp.buf.references()<CR>", "goto function references"},
     },
-    K = {"<cmd>lua vim.lsp.buf.hover()<cr>", "show diagnostic hover"},
+    K = {"<cmd>lua vim.lsp.buf.hover()<CR>", "show diagnostic hover"},
     --vim.cmd [[ command! format execute 'lua vim.lsp.buf.formatting()' ]]
 },{
     mode = "n", -- NORMAL mode
@@ -103,6 +107,5 @@ which_key.register({
     silent = false, -- use `silent` when creating keymaps
     noremap = true, -- use `noremap` when creating keymaps
     nowait = true, -- use `nowait` when creating keymaps
-
 })
 

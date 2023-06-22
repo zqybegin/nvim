@@ -46,19 +46,24 @@ return packer.startup(function(use)
     -- theme
     use({ 'rose-pine/neovim', as = 'rose-pine' })
 
-    -- Plugins
+    -- basic plugins
     use "nvim-lua/popup.nvim"           -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim"         -- Useful lua functions used ny lots of plugins
     use 'norcalli/nvim-colorizer.lua'   -- show color from hex
     use 'ziontee113/icon-picker.nvim'   -- help you pick text icon
     use "stevearc/dressing.nvim"        -- icon picker needed 
 
+    -- useful plugin
+    use "akinsho/toggleterm.nvim"  -- toggle and presist terminal 
     use "windwp/nvim-autopairs"    -- Autopairs, integrates with both cmp and treesitter
     use 'folke/which-key.nvim'     -- help to remember the meaning of key 
-    use 'yamatsum/nvim-cursorline' -- underline the word under the cursor 
     use 'numToStr/Comment.nvim'    -- comment
     use 'gelguy/wilder.nvim'       -- cmd autocompletion 
     use 'romgrk/fzy-lua-native'    -- used by wilder.nvim highlight 
+
+    -- editor plugin
+    use 'yamatsum/nvim-cursorline'  -- underline the word under the cursor 
+    use "lukas-reineke/indent-blankline.nvim"  -- show blankline
 
     -- nvim tree and bufferline
     use 'nvim-tree/nvim-tree.lua'     -- file tree
@@ -91,7 +96,7 @@ return packer.startup(function(use)
 
     -- Treesitter
     use{"nvim-treesitter/nvim-treesitter", run = ":TSUpdate",}
-    use "p00f/nvim-ts-rainbow"                      -- show rainbow color
+    -- use "p00f/nvim-ts-rainbow"                      -- show rainbow color
     use "nvim-treesitter/nvim-treesitter-context"   -- highlight code based on treesitter
     use "mbbill/undotree"                           -- smart to record undo list
 

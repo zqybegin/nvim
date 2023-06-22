@@ -9,6 +9,30 @@ nvim_tree.setup {
     disable_netrw = true,
     hijack_netrw = true,
     update_cwd = true,
+    view = {
+        centralize_selection = true,
+        cursorline = true,
+        debounce_delay = 15,
+        width = 30,
+        hide_root_folder = false,
+        side = "left",
+        preserve_window_proportions = false,
+        number = false,
+        relativenumber = false,
+        signcolumn = "yes",
+        float = {
+            enable = false,
+            quit_on_focus_loss = true,
+            open_win_config = {
+                relative = "editor",
+                border = "rounded",
+                width = 30,
+                height = 30,
+                row = 1,
+                col = 1,
+            },
+        },
+    },
     diagnostics = {
         enable = true,
         icons = {
@@ -25,7 +49,25 @@ nvim_tree.setup {
     },
     renderer = {
         highlight_git = true,
+        indent_markers = {
+            enable = true,
+            inline_arrows = true,
+            icons = {
+                corner = "└",
+                edge = "│",
+                item = "│",
+                bottom = "─",
+                none = " ",
+            },
+        },
         icons = {
+            show = {
+                file = true,
+                folder = true,
+                folder_arrow = true,
+                git = true,
+                modified = true,
+            },
             glyphs = {
                 default = "",
                 symlink = "",
