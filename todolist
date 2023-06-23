@@ -3,8 +3,26 @@
 * add all key to a table and Ctrl handle with buffer
 
 * use voldikss/vim-floaterm
-* use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters 
-* use 'rhysd/git-messenger.vim' -- 利用 git blame 显示当前行的 commit message 
+* use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+* use 'rhysd/git-messenger.vim' -- 利用 git blame 显示当前行的 commit message
 * use 'mhinz/vim-startify' -- 启动界面
 * vim-easy-align -- align
+* folke/trouble.nvim: show code errors
+* fold text
+* use 'lewis6991/spellsitter.nvim' -- 当检查拼写的时候，仅仅检查注释
+* use 'mhinz/vim-startify' -- 启动界面
+* use { 'nvim-telescope/telescope-fzf-native.nvim',
+      run = 'make' } -- telescope 搜索的插件，可以提升搜索效率
+* use 'voldikss/vim-floaterm' -- 终端
+* use 'tpope/vim-repeat' -- 更加强大的 `.`
+* use 'mg979/vim-visual-multi' -- 同时编辑多个位置
+* use 'mg979/vim-visual-multi' -- 同时编辑多个位置
+* use 'AckslD/nvim-neoclip.lua' -- 保存 macro
+* use 'windwp/nvim-spectre' -- 媲美 vscode 的多文件替换
+* use 'wakatime/vim-wakatime' -- 代码时间统计
+* use 'andymass/vim-matchup' -- 高亮匹配的元素，例如 #if 和 #endif
+* use 'tyru/open-browser.vim' -- 使用 gx 打开链接
+* use 'martins3/fcitx.nvim' -- 自动切换输入法
+* use 'azabiong/vim-highlighter' -- 高亮多个搜索内容
+
 

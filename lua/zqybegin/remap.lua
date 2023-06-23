@@ -1,13 +1,16 @@
--- Modes
 -- define <leader> key as space
 vim.g.mapleader = " "
 
+-- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
 --   visual_block_mode = "x",
 --   term_mode = "t",
 --   command_mode = "c",
+
+-- Trick: paste word in the next line
+-- use "o<Alt + p>", alt will exit insert_mode to exe command
 
 -- move and delete buffer
 vim.keymap.set('n', '<C-h>', '<cmd>bp<CR>')
@@ -20,9 +23,6 @@ vim.keymap.set('', 'P', 'p', { noremap = true })
 
 -- smart copy
 vim.keymap.set("v", "p", '"_dP')
-
--- cancel q: to open command-line window 
-vim.keymap.set("n", "q:" ,"<nop>")
 
 -- use q to quit neovim
 vim.keymap.set("n", "q" ,"<cmd>q<CR>")
@@ -37,7 +37,7 @@ vim.keymap.set("n", "<C-Down>", ":resize -2<CR>")
 vim.keymap.set("n", "<C-Left>", ":vertical resize -2<CR>")
 vim.keymap.set("n", "<C-Right>", ":vertical resize +2<CR>")
 
--- type W to save file 
+-- type W to save file
 vim.keymap.set("n", "W" ,"<cmd>:w<CR>")
 
 -- type <ENTER> to disable highlight of word

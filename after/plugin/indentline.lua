@@ -8,7 +8,7 @@ vim.g.indent_blankline_char = "▏"
 -- vim.g.indent_blankline_char = "│"
 -- vim.g.indent_blankline_char = "▎"
 
--- don't displays line on blank line 
+-- don't displays line on blank line
 vim.g.indent_blankline_show_trailing_blankline_indent = false
 -- displays indentation in the first column
 vim.g.indent_blankline_show_first_indent_level = true

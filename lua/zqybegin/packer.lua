@@ -51,28 +51,28 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim"         -- Useful lua functions used by lots of plugins
     use "norcalli/nvim-colorizer.lua"   -- show color from hex
     use "ziontee113/icon-picker.nvim"   -- help you pick text icon
-    use "stevearc/dressing.nvim"        -- icon picker needed 
+    use "stevearc/dressing.nvim"        -- icon picker needed
 
     -- useful plugin
-    use "akinsho/toggleterm.nvim"  -- toggle and presist terminal 
+    use "akinsho/toggleterm.nvim"  -- toggle and presist terminal
     use "windwp/nvim-autopairs"    -- Autopairs, integrates with both cmp and treesitter
-    use "folke/which-key.nvim"     -- help to remember the meaning of key 
+    use "folke/which-key.nvim"     -- help to remember the meaning of key
     use "numToStr/Comment.nvim"    -- comment
-    use "gelguy/wilder.nvim"       -- cmd autocompletion 
-    use "romgrk/fzy-lua-native"    -- used by wilder.nvim highlight 
-    use "lambdalisue/suda.vim"     -- allows one to edit a file with prevledges from an unprivledged session 
+    use "gelguy/wilder.nvim"       -- cmd autocompletion
+    use "romgrk/fzy-lua-native"    -- used by wilder.nvim highlight
+    use "lambdalisue/suda.vim"     -- allows one to edit a file with prevledges from an unprivledged session
 
-
-    -- editor plugin
-    use "yamatsum/nvim-cursorline"  -- underline the word under the cursor 
-    use "lukas-reineke/indent-blankline.nvim"  -- show blankline
+    -- UI plugin
+    use "yamatsum/nvim-cursorline"  -- underline the word under the cursor
+    use "lukas-reineke/indent-blankline.nvim"  -- show indent blankline
+    use "ntpeters/vim-better-whitespace"  -- better handling of whitespace characters
 
     -- nvim tree and bufferline
     use "nvim-tree/nvim-tree.lua"     -- file tree
     use "nvim-tree/nvim-web-devicons" -- file tree icon
     use "akinsho/bufferline.nvim"     -- bufferline control
     use "ojroques/nvim-bufdel"        -- close buffer gently
-    -- use "moll/vim-byye" will be comfict
+    -- use "moll/vim-byye" will be comfict with nvim-ts-rainbow
 
     -- cmp plugins
     use "hrsh7th/nvim-cmp"          -- The completion plugin
@@ -80,7 +80,7 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-path"          -- source of path completions
     use "hrsh7th/cmp-cmdline"       -- source of cmdline completions
     use "saadparwaiz1/cmp_luasnip"  -- source of snippet completions
-    use "hrsh7th/cmp-nvim-lsp"      -- source of lsp completions 
+    use "hrsh7th/cmp-nvim-lsp"      -- source of lsp completions
     use "hrsh7th/cmp-nvim-lua"      -- source of nvim config completions
 
     -- snippets
