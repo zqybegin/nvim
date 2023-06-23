@@ -48,7 +48,7 @@ return packer.startup(function(use)
 
     -- basic plugins
     use "nvim-lua/popup.nvim"           -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim"         -- Useful lua functions used ny lots of plugins
+    use "nvim-lua/plenary.nvim"         -- Useful lua functions used by lots of plugins
     use "norcalli/nvim-colorizer.lua"   -- show color from hex
     use "ziontee113/icon-picker.nvim"   -- help you pick text icon
     use "stevearc/dressing.nvim"        -- icon picker needed 
@@ -60,6 +60,8 @@ return packer.startup(function(use)
     use "numToStr/Comment.nvim"    -- comment
     use "gelguy/wilder.nvim"       -- cmd autocompletion 
     use "romgrk/fzy-lua-native"    -- used by wilder.nvim highlight 
+    use "lambdalisue/suda.vim"     -- allows one to edit a file with prevledges from an unprivledged session 
+
 
     -- editor plugin
     use "yamatsum/nvim-cursorline"  -- underline the word under the cursor 

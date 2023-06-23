@@ -28,15 +28,8 @@ vim.keymap.set("n", "q:" ,"<nop>")
 vim.keymap.set("n", "q" ,"<cmd>q<CR>")
 
 -- convenient to move to the begin/end of line
-vim.keymap.set("n", "H" ,"^")
-vim.keymap.set("n", "L" ,"$")
-
--- if don't use, the action of dH/dL is confused by which-key plugin.
--- the expected behavior is delete words from cursor to the end/begin of line.
--- but the actual behavior is based on otiginal H/L.
--- this problem should be solved by reading the manal of which-key. but I can't find.
--- vim.keymap.set("n", "dH" ,"d^")
--- vim.keymap.set("n", "dL" ,"d$")
+vim.keymap.set("", "H" ,"^")
+vim.keymap.set("", "L" ,"$")
 
 -- Resize with arrows
 vim.keymap.set("n", "<C-Up>", ":resize +2<CR>")

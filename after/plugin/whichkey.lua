@@ -53,7 +53,8 @@ which_key.register({
     f = {
         name = "file tree",
         o = { "<cmd>NvimTreeFindFile<CR>", "open file in dir" },
-        t = { "<cmd>NvimTreeToggle<CR>", "toggle file tree" }
+        t = { "<cmd>NvimTreeToggle<CR>", "toggle file tree" },
+        s = { "<cmd>SudaWrite<CR>", "sudo write file"}
     },
 
     -- Git:https://github.com/lewis6991/gitsigns.nvim#keymaps

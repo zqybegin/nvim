@@ -6,3 +6,5 @@
 * use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters 
 * use 'rhysd/git-messenger.vim' -- 利用 git blame 显示当前行的 commit message 
 * use 'mhinz/vim-startify' -- 启动界面
+* vim-easy-align -- align
+
