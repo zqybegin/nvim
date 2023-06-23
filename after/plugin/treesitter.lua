@@ -40,12 +40,12 @@ treesitter.setup {
     }
 }
 -- colors group set in rainbow
--- vim.cmd('highlight  rainbowcol1  guifg=#8be9fd')
--- vim.cmd('highlight  rainbowcol2  guifg=#bd93f9')
--- vim.cmd('highlight  rainbowcol3  guifg=#FDC1AA')
--- vim.cmd('highlight  rainbowcol5  guifg=#d65d0e')
--- vim.cmd('highlight  rainbowcol4  guifg=#50fa7b')
--- vim.cmd('highlight  rainbowcol6  guifg=#ffb86c')
+vim.cmd('highlight  rainbowcol1  guifg=#8be9fd')
+vim.cmd('highlight  rainbowcol2  guifg=#bd93f9')
+vim.cmd('highlight  rainbowcol3  guifg=#FDC1AA')
+vim.cmd('highlight  rainbowcol5  guifg=#d65d0e')
+vim.cmd('highlight  rainbowcol4  guifg=#50fa7b')
+vim.cmd('highlight  rainbowcol6  guifg=#ffb86c')
 
 -- if plugin isn't loaded, only return and don't report error
 local context_status_ok, treesitter_context = pcall(require, 'treesitter-context')
