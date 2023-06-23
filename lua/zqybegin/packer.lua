@@ -53,14 +53,17 @@ return packer.startup(function(use)
     use "ziontee113/icon-picker.nvim"   -- help you pick text icon
     use "stevearc/dressing.nvim"        -- icon picker needed
 
-    -- useful plugin
-    use "akinsho/toggleterm.nvim"  -- toggle and presist terminal
+    -- eidtor plugin
     use "windwp/nvim-autopairs"    -- Autopairs, integrates with both cmp and treesitter
-    use "folke/which-key.nvim"     -- help to remember the meaning of key
     use "numToStr/Comment.nvim"    -- comment
     use "gelguy/wilder.nvim"       -- cmd autocompletion
     use "romgrk/fzy-lua-native"    -- used by wilder.nvim highlight
+
+    -- useful(useless) plugin
+    use "akinsho/toggleterm.nvim"  -- toggle and presist terminal
+    use "folke/which-key.nvim"     -- help to remember the meaning of key
     use "lambdalisue/suda.vim"     -- allows one to edit a file with prevledges from an unprivledged session
+    use "wakatime/vim-wakatime"    -- code time tracking
 
     -- UI plugin
     use "yamatsum/nvim-cursorline"  -- underline the word under the cursor
