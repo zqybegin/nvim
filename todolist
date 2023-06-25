@@ -15,10 +15,8 @@
       run = 'make' } -- telescope 搜索的插件，可以提升搜索效率
 * use 'voldikss/vim-floaterm' -- 终端
 * use 'tpope/vim-repeat' -- 更加强大的 `.`
-* use 'mg979/vim-visual-multi' -- 同时编辑多个位置
 * use 'AckslD/nvim-neoclip.lua' -- 保存 macro
 * use 'windwp/nvim-spectre' -- 媲美 vscode 的多文件替换
-* use 'wakatime/vim-wakatime' -- 代码时间统计
 * use 'andymass/vim-matchup' -- 高亮匹配的元素，例如 #if 和 #endif
 * use 'martins3/fcitx.nvim' -- 自动切换输入法
 * use 'azabiong/vim-highlighter' -- 高亮多个搜索内容

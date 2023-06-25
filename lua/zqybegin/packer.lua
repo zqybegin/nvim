@@ -65,6 +65,17 @@ return packer.startup(function(use)
     use "lambdalisue/suda.vim"     -- allows one to edit a file with prevledges from an unprivledged session
     use "wakatime/vim-wakatime"    -- code time tracking
     use "tyru/open-browser.vim"    -- open link in browser
+    use{
+        "mg979/vim-visual-multi",  -- vim multi line
+        -- need to config there:https://github.com/mg979/vim-visual-multi/issues/241
+        config = function ()
+            vim.g.VM_theme = 'codedark'  -- use ":VMTheme codedark" to preview
+            vim.g.VM_maps = {
+                ["Add Cursor Down"] = '<C-j>',   -- new cursor down
+                ["Add Cursor Up"] = '<C-k>',   -- new cursor up
+            }
+        end,
+    }
 
     -- UI plugin
     use "yamatsum/nvim-cursorline"  -- underline the word under the cursor

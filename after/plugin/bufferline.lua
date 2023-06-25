@@ -38,7 +38,7 @@ bufferline.setup {
         max_name_length = 18,
         max_prefix_length = 15, -- prefix used when a buffer is de-duplicated
         truncate_names = false, -- whether or not tab names should be truncated
-        tab_size = 18,
+        tab_size = 15,
         diagnostics = false, -- false | "nvim_lsp" | "coc",
         diagnostics_update_in_insert = false,
         -- The diagnostics indicator can be set to nil to keep the buffer name highlight but delete the highlighting
@@ -112,7 +112,7 @@ bufferline.setup {
         offset_separator = {
             fg = rose_highlights.highlight_med,
         },
-        --  Other buffers which are not visible or don't have cursor 
+        --  Other buffers which are not visible or don't have cursor
         background = {
             fg = "#908caa",
             bg = { attribute = "bg", highlight = "Comment" }

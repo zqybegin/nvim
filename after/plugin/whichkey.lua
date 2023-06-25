@@ -35,7 +35,7 @@ which_key.setup{
 
 which_key.register({
     ["u"]  = {"<cmd>UndotreeToggle<CR>", "UndoTree"},
-    ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gc<Left><Left><Left>]], "Amazing Replace"},
+    ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gcI<Left><Left><Left><Left>]], "Amazing Replace"},
     ["w"] = { "<cmd>w<CR><cmd>so<CR>","Wirte and Source this file" },
     ["i"] = { "<cmd>IconPickerNormal<CR>","insert text icon"},
     ["q"] = { "<cmd>xa<CR>","exit nvim"},
@@ -101,7 +101,7 @@ which_key.register({
 })
 
 which_key.register({
-    ["s"]  = {[["hy:%s/<C-r>h//gc<left><left><left>]], "Amazing Replace"},
+    ["s"]  = {[["hy:%s/<C-r>h/<C-r>h/gcI<left><left><left><left>]], "Amazing Replace"},
 },{
     mode = "v", -- NORMAL mode
     prefix = "<leader>",
