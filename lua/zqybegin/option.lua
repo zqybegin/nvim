@@ -35,3 +35,6 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd [[set iskeyword+=<]]
 vim.cmd [[set iskeyword+=>]]
 
+-- disable netrw's gx mapping
+vim.g.netrw_nogx = 1
+

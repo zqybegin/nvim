@@ -88,11 +88,12 @@ which_key.register({
         D = {"<cmd>lua vim.lsp.buf.declaration()<CR>", "goto function declaration"},
         i = {"<cmd>lua vim.lsp.buf.implementation()<CR>", "goto function implementation"},
         r = {"<cmd>lua vim.lsp.buf.references()<CR>", "goto function references"},
+        x = {"<Plug>(openbrowser-smart-search)", "goto link"},
     },
     K = {"<cmd>lua vim.lsp.buf.hover()<CR>", "show diagnostic hover"},
     --vim.cmd [[ command! format execute 'lua vim.lsp.buf.formatting()' ]]
 },{
-    mode = "n", -- NORMAL mode
+    mode = "",
     buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
     silent = true, -- use `silent` when creating keymaps
     noremap = true, -- use `noremap` when creating keymaps

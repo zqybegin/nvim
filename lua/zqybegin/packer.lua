@@ -64,6 +64,7 @@ return packer.startup(function(use)
     use "folke/which-key.nvim"     -- help to remember the meaning of key
     use "lambdalisue/suda.vim"     -- allows one to edit a file with prevledges from an unprivledged session
     use "wakatime/vim-wakatime"    -- code time tracking
+    use "tyru/open-browser.vim"    -- open link in browser
 
     -- UI plugin
     use "yamatsum/nvim-cursorline"  -- underline the word under the cursor
