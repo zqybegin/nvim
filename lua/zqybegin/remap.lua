@@ -24,6 +24,9 @@ vim.keymap.set('', 'P', 'p', { noremap = true })
 -- smart copy
 vim.keymap.set("v", "p", '"_dP')
 
+-- smart copy
+vim.keymap.set("v", "<C-c>", 'y')
+
 -- use q to quit neovim
 vim.keymap.set("n", "q" ,"<cmd>q<CR>")
 
