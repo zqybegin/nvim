@@ -1,4 +1,4 @@
--- the next config will used cmp_nvim_lsp 
+-- the next config will used cmp_nvim_lsp
 local cmp_status_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_status_ok then
     print "cmp_nvim_lsp isn't installed"
@@ -11,15 +11,15 @@ if not lspconfig_status_ok then
     return
 end
 
--- add the the absolute path of this file to package.path to easily require  
+-- add the the absolute path of this file to package.path to easily require
 local script_dir = debug.getinfo(1, 'S').source:sub(2):gsub('/[^/]+$', '')
 package.path = package.path .. ';' .. script_dir .. '/?.lua'
 local servers = require("mason_config")
 
 for _, server in pairs(servers) do
-    -- add handle config in handle.lua
+   -- add handle config in handle.lua
     local opts = {
-        -- add on attach keybind, this code is integrated in which-key.lua 
+        -- add on attach keybind, this code is integrated in which-key.lua
         -- on_attach =(function(bufnr)
         --     lsp_keymaps(bufnr) -- add keymap
         -- end),

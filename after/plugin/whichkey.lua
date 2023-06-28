@@ -34,21 +34,18 @@ which_key.setup{
 }
 
 which_key.register({
-    ["u"]  = {"<cmd>UndotreeToggle<CR>", "UndoTree"},
-    ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gcI<Left><Left><Left><Left>]], "Amazing Replace"},
+    ["u"]  = {"<cmd>UndotreeToggle<CR>", "UndoTree" },
+    ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gcI<Left><Left><Left><Left>]], "Amazing Replace" },
     ["w"] = { "<cmd>w<CR><cmd>so<CR>","Wirte and Source this file" },
-    ["i"] = { "<cmd>IconPickerNormal<CR>","insert text icon"},
-    ["q"] = { "<cmd>xa<CR>","exit nvim"},
-    v = {
-        name = "vertically spilt",
-        f = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>","open file"},
-        h = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope help_tags<CR>","open file"},
-    };
+    ["i"] = { "<cmd>IconPickerNormal<CR>","insert text icon" },
+    ["q"] = { "<cmd>xa<CR>","exit nvim" },
+    ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>","Search file" },
     p = {
         name = "Fuzzy find",
         f = { "<cmd>Telescope find_files<CR>", "Search Files" },
         s = { function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })end, "Search Symbol" },
-        h = { "<cmd>Telescope help_tags<CR>", "Search Vim Manual" },
+        h = { "<cmd>Telescope help_tags<CR>", "open help" },
+        m = { "<cmd>Telescope man_pages<CR>", "open man" },
     },
     f = {
         name = "file tree",
@@ -67,7 +64,7 @@ which_key.register({
     },
 
     -- LSP control
-    ["j"] = { '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<cCR>', "next diagnostic"},
+    ["j"] = { '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', "next diagnostic"},
     ["k"] = { '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', "prev diagnostic"},
     ["o"] = { '<cmd>lua vim.diagnostic.open_float()<CR>', "open diagnostic"},
     -- ["s"] = { "<cmd>lua vim.diagnostic.setloclist()<CR>", "save to location list"},

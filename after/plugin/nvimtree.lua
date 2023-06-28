@@ -6,33 +6,17 @@ end
 -- following options are the default
 -- each of these are documented in `:help nvim-tree.OPTION_NAME`
 nvim_tree.setup {
-    disable_netrw = true,
-    hijack_netrw = true,
-    update_cwd = true,
+    disable_netrw = true, -- Completely disable netrw
+    hijack_cursor = true, -- Keeps the cursor on the first letter of the filename when moving in the tree.
+    -- Window / buffer setup.
     view = {
-        centralize_selection = false,
-        cursorline = true,
-        debounce_delay = 15,
-        width = 25,
-        hide_root_folder = false,
-        side = "left",
-        preserve_window_proportions = false,
-        number = false,
-        relativenumber = false,
-        signcolumn = "yes",
-        float = {
-            enable = false,
-            quit_on_focus_loss = true,
-            open_win_config = {
-                relative = "editor",
-                border = "rounded",
-                width = 30,
-                height = 30,
-                row = 1,
-                col = 1,
-            },
+        -- A table indicates that the view should be dynamically sized based on the longest line
+        width = {
+            min = 25,
+            max = 35,
         },
     },
+    -- Show LSP and COC diagnostics in the signcolumn
     diagnostics = {
         enable = true,
         icons = {
@@ -47,28 +31,14 @@ nvim_tree.setup {
         ignore = true,
         timeout = 500,
     },
+    -- UI rendering setup
     renderer = {
-        highlight_git = true,
+        highlight_git = true, -- Enable file highlight for git attributes
         indent_markers = {
             enable = true,
-            inline_arrows = true,
-            icons = {
-                corner = "└",
-                edge = "│",
-                item = "│",
-                bottom = "─",
-                none = " ",
-            },
         },
         icons = {
-            show = {
-                file = true,
-                folder = true,
-                folder_arrow = true,
-                git = true,
-                modified = true,
-            },
-            glyphs = {
+           glyphs = {
                 default = "",
                 symlink = "",
                 git = {
@@ -76,7 +46,7 @@ nvim_tree.setup {
                     staged = "✓",
                     unmerged = "",
                     renamed = "➜",
-                    deleted = "",
+                    deleted = "",
                     untracked = "υ",
                     ignored = "◌",
                 },
@@ -89,19 +59,5 @@ nvim_tree.setup {
                 },
             }
         }
-    },
-    log = {
-        enable = true,
-        truncate = false,
-        types = {
-            all = false,
-            config = false,
-            copy_paste = false,
-            dev = false,
-            diagnostics = false,
-            git = false,
-            profile = false,
-            watcher = false,
-        },
     },
 }
