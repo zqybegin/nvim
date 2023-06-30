@@ -79,9 +79,10 @@ return packer.startup(function(use)
 
 
     -- UI plugin
-    -- use "yamatsum/nvim-cursorline"  will error in nvimtree rename -- underline the word under the cursor
     use "lukas-reineke/indent-blankline.nvim"  -- show indent blankline
     use "ntpeters/vim-better-whitespace"  -- better handling of whitespace characters
+    -- use "yamatsum/nvim-cursorline"  will error in nvimtree rename -- underline the word under the cursor
+    use "RRethy/vim-illuminate" --highlight the word under the cursor
 
     -- nvim tree and bufferline
     use "nvim-tree/nvim-tree.lua"     -- file tree
