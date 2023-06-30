@@ -47,5 +47,3 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
     end
 })
 
--- use simple way to use lsp formatting
-vim.cmd [[ command! Format execute 'lua vim.lsp.buf.format()' ]]

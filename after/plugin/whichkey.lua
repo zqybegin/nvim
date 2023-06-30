@@ -36,7 +36,7 @@ which_key.setup{
 which_key.register({
     ["u"]  = {"<cmd>UndotreeToggle<CR>", "UndoTree" },
     ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gcI<Left><Left><Left><Left>]], "Amazing Replace" },
-    ["w"] = { "<cmd>w<CR><cmd>so<CR>","Wirte and Source this file" },
+    ["w"] = { "<cmd>SmartSave<CR>","Wirte and Source this file" },
     ["i"] = { "<cmd>IconPickerNormal<CR>","insert text icon" },
     ["q"] = { "<cmd>xa<CR>","exit nvim" },
     ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>","Search file" },
@@ -75,7 +75,6 @@ which_key.register({
     silent = false, -- use `silent` when creating keymaps
     noremap = true, -- use `noremap` when creating keymaps
     nowait = true, -- use `nowait` when creating keymaps
-
 })
 
 which_key.register({
