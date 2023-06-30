@@ -58,13 +58,6 @@ return packer.startup(function(use)
     use "numToStr/Comment.nvim"    -- comment
     use "gelguy/wilder.nvim"       -- cmd autocompletion
     use "romgrk/fzy-lua-native"    -- used by wilder.nvim highlight
-
-    -- useful(useless) plugin
-    use "akinsho/toggleterm.nvim"  -- toggle and presist terminal
-    use "folke/which-key.nvim"     -- help to remember the meaning of key
-    use "lambdalisue/suda.vim"     -- allows one to edit a file with prevledges from an unprivledged session
-    use "wakatime/vim-wakatime"    -- code time tracking
-    use "tyru/open-browser.vim"    -- open link in browser
     use{
         "mg979/vim-visual-multi",  -- vim multi line
         -- need to config there:https://github.com/mg979/vim-visual-multi/issues/241
@@ -76,6 +69,14 @@ return packer.startup(function(use)
             }
         end,
     }
+    -- useful(useless) plugin
+    use "akinsho/toggleterm.nvim"  -- toggle and presist terminal
+    use "folke/which-key.nvim"     -- help to remember the meaning of key
+    use "lambdalisue/suda.vim"     -- allows one to edit a file with prevledges from an unprivledged session
+    use "wakatime/vim-wakatime"    -- code time tracking
+    use "tyru/open-browser.vim"    -- open link in browser
+    use "dstein64/vim-startuptime" -- view stratup time
+
 
     -- UI plugin
     -- use "yamatsum/nvim-cursorline"  will error in nvimtree rename -- underline the word under the cursor
