@@ -45,6 +45,8 @@ return packer.startup(function(use)
 
     -- theme
     use({ "rose-pine/neovim", as = "rose-pine" })
+    use "folke/tokyonight.nvim"
+    use "daschw/leaf.nvim"
 
     -- basic plugins
     use "nvim-lua/popup.nvim"           -- An implementation of the Popup API from vim in Neovim

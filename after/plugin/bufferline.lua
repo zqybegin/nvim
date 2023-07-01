@@ -112,46 +112,46 @@ bufferline.setup {
         offset_separator = {
             fg = rose_highlights.highlight_med,
         },
-        --  Other buffers which are not visible or don't have cursor
-        background = {
-            fg = "#908caa",
-            bg = { attribute = "bg", highlight = "Comment" }
-        },
-        -- The buffer show when cursor enter the file-tree
-        buffer_visible = {
-            fg = "#908caa",
-            bg = { attribute = "bg", highlight = "Comment" }
-        },
-        -- The buffer where the cursor is located in
-        buffer_selected = {
-            fg = "#FFFFFF",
-            bg = { attribute = "bg", highlight = "Comment" },
-            bold = true,
-            italic = true,
-        },
-        close_button = {
-            fg = "#908caa",
-            bg = { attribute = "bg", highlight = "Normal"  }
-        },
-        close_button_visible = {
-            fg = "#FFFFFF",
-            bg = { attribute = "bg", highlight = "Comment" }
-        },
-        close_button_selected = {
-            fg = "#FFFFFF",
-            bg = { attribute = "bg", highlight = "Comment" }
-        },
-        -- indicator_visible = {
-        --     fg = "#ea9a97",
-        --     bg = "#ea9a97",
-        --     sp = "#ea9a97",
-        -- },
-        -- indicator_selected = {
-        --     fg = "#ea9a97",
-        --     bg = "#ea9a97",
-        --     sp = "#ea9a97",
-        --     -- bg = { attribute = "bg", highlight = "Comment" }
-        -- },
+    --     --  Other buffers which are not visible or don't have cursor
+    --     background = {
+    --         fg = "#908caa",
+    --         bg = { attribute = "bg", highlight = "Comment" }
+    --     },
+    --     -- The buffer show when cursor enter the file-tree
+    --     buffer_visible = {
+    --         fg = "#908caa",
+    --         bg = { attribute = "bg", highlight = "Comment" }
+    --     },
+    --     -- The buffer where the cursor is located in
+    --     buffer_selected = {
+    --         fg = "#FFFFFF",
+    --         bg = { attribute = "bg", highlight = "Comment" },
+    --         bold = true,
+    --         italic = true,
+    --     },
+    --     close_button = {
+    --         fg = "#908caa",
+    --         bg = { attribute = "bg", highlight = "Normal"  }
+    --     },
+    --     close_button_visible = {
+    --         fg = "#FFFFFF",
+    --         bg = { attribute = "bg", highlight = "Comment" }
+    --     },
+    --     close_button_selected = {
+    --         fg = "#FFFFFF",
+    --         bg = { attribute = "bg", highlight = "Comment" }
+    --     },
+    --     -- indicator_visible = {
+    --     --     fg = "#ea9a97",
+    --     --     bg = "#ea9a97",
+    --     --     sp = "#ea9a97",
+    --     -- },
+    --     -- indicator_selected = {
+    --     --     fg = "#ea9a97",
+    --     --     bg = "#ea9a97",
+    --     --     sp = "#ea9a97",
+    --     --     -- bg = { attribute = "bg", highlight = "Comment" }
+    --     -- },
     };
 }
 vim.keymap.set("n","<leader><leader>s","<cmd>w<CR><cmd>so<CR><cmd>PackerCompile<CR>")
