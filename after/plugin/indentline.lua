@@ -3,19 +3,25 @@ if not status_ok then
     return
 end
 
-vim.g.indentLine_enabled = true
-vim.g.indent_blankline_char = "▏"
--- vim.g.indent_blankline_char = "│"
--- vim.g.indent_blankline_char = "▎"
+indent_blankline.setup{
+    enabled = true,
+    char = "▏",
+    -- char = "│",
+    -- char = "▎",
 
--- don't displays line on blank line
-vim.g.indent_blankline_show_trailing_blankline_indent = false
--- displays indentation in the first column
-vim.g.indent_blankline_show_first_indent_level = true
--- use treesitter to define current context and show color
-vim.g.indent_blankline_use_treesitter = true
-vim.g.indent_blankline_show_current_context = true
-vim.g.indent_blankline_show_current_context_start = false
+    -- don't displays line on blank line,
+    show_trailing_blankline_indent = false,
+
+    -- displays indentation in the first column,
+    show_first_indent_level = true,
+
+    -- use treesitter to define current context and show color,
+    use_treesitter = true,
+    show_current_context = true,
+    show_current_context_start = false,
+
+}
+
 -- color of line when show_current_context
 vim.cmd [[highlight IndentBlanklineContextChar guifg=#E06C75 gui=nocombine]]
 -- color of line when show_current_context_start

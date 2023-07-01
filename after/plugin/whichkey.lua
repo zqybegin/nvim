@@ -57,8 +57,8 @@ which_key.register({
     -- Git:https://github.com/lewis6991/gitsigns.nvim#keymaps
     g = {
         name = "Git",
-        j = {'<cmd>Gitsigns next_hunk<CR>', "next change"},
-        k = {'<cmd>Gitsigns prev_hunk<CR>', "prev change"},
+        n = {'<cmd>lua require"gitsigns".next_hunk{preview=true}<CR>', "next change"},
+        p = {'<cmd>lua require"gitsigns".prev_hunk{preview=true}<CR>', "prev change"},
         o = {'<cmd>Gitsigns preview_hunk<CR>', "open change"},
         r = {'<cmd>Gitsigns reset_hunk<CR>', "reset change"},
     },

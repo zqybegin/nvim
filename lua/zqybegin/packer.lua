@@ -119,6 +119,7 @@ return packer.startup(function(use)
     use "p00f/nvim-ts-rainbow"                      -- show rainbow color
     use "nvim-treesitter/nvim-treesitter-context"   -- highlight code based on treesitter
     use "mbbill/undotree"                           -- smart to record undo list
+    use "nvim-treesitter/playground"                -- treesitter tree
 
     -- Git
     use "lewis6991/gitsigns.nvim"

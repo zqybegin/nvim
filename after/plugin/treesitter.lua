@@ -6,7 +6,7 @@ end
 
 treesitter.setup {
     -- A list of parser names, or "all"
-    ensure_installed = {"verilog", "vimdoc", "c", "lua", "rust" },
+    ensure_installed = {"verilog", "vimdoc", "c", "lua" },
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = true,
 
