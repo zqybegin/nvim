@@ -40,6 +40,7 @@ which_key.register({
     ["i"] = { "<cmd>IconPickerNormal<CR>","insert text icon" },
     ["q"] = { "<cmd>xa<CR>","exit nvim" },
     ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>","Search file" },
+
     p = {
         name = "Fuzzy find",
         f = { "<cmd>Telescope find_files<CR>", "Search Files" },
@@ -62,6 +63,8 @@ which_key.register({
         o = {'<cmd>Gitsigns preview_hunk<CR>', "open change"},
         r = {'<cmd>Gitsigns reset_hunk<CR>', "reset change"},
     },
+    -- InterestingWords plugin
+    ["h"] = {"<cmd>call InterestingWords('n')<CR>","highlight word"},
 
     -- LSP control
     ["j"] = { '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', "next diagnostic"},
