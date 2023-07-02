@@ -20,12 +20,12 @@ vim.keymap.set('n', '<C-q>', '<cmd>BufDel<CR>')
 -- replace the action of "p" with "P"
 vim.keymap.set('', 'p', 'P', { noremap = true })
 vim.keymap.set('', 'P', 'p', { noremap = true })
-
--- smart copy
+-- smart copy: select the text that needs to be replaced
 vim.keymap.set("v", "p", '"_dP')
-
--- smart copy
+-- smart copy: align with mouse copying in tmux
 vim.keymap.set("v", "<C-c>", 'y')
+-- smart copy: dirctly copy in insert_mode
+vim.keymap.set("i", "<M-p>", '<C-r>+')
 
 -- use q to quit neovim
 vim.keymap.set("n", "q" ,"<cmd>q<CR>")

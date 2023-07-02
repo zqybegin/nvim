@@ -8,13 +8,16 @@ if not snip_status_ok then
     return
 end
 
--- require("luasnip/loaders/from_vscode").lazy_load()
+-- add sinppte from friendly-snippets
+require("luasnip.loaders.from_vscode").lazy_load()
 
+-- use in cmp.setup.mapping
 local check_backspace = function()
     local col = vim.fn.col "." - 1
     return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
+-- find more here: https://www.nerdfonts.com/cheat-sheet
 --   פּ ﯟ   some other good icons
 local kind_icons = {
     Text = "",
@@ -43,7 +46,6 @@ local kind_icons = {
     Operator = "",
     TypeParameter = "",
 }
--- find more here: https://www.nerdfonts.com/cheat-sheet
 
 cmp.setup {
     snippet = {
@@ -64,8 +66,8 @@ cmp.setup {
         },
         -- Accept currently selected item. If none selected, `select` first item.
         -- Set `select` to `false` to only confirm explicitly selected items.
-        ["<Tab>"] = cmp.mapping.confirm { select = true },
-        ["<C-j>"] = cmp.mapping(function(fallback)
+        ["<CR>"] = cmp.mapping.confirm { select = true },
+        ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
             elseif luasnip.expandable() then
@@ -78,7 +80,7 @@ cmp.setup {
                 fallback()
             end
         end, {"i","s",}),
-        ["<C-k>"] = cmp.mapping(function(fallback)
+        ["<S-Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_prev_item()
             elseif luasnip.jumpable(-1) then
@@ -94,18 +96,18 @@ cmp.setup {
             -- Kind icons
             -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
             vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
-            -- ADD-SOURCE 
+            -- ADD-SOURCE
             vim_item.menu = ({
                 nvim_lsp = "[LSP]",
                 nvim_lua = "[LUA]",
-                luasnip = "[Snippet]",
-                buffer = "[Buffer]",
-                path = "[Path]",
+                luasnip  = "[Snippet]",
+                buffer   = "[Buffer]",
+                path     = "[Path]",
             })[entry.source.name]
             return vim_item
         end,
     },
-    -- ADD-SOURCE 
+    -- ADD-SOURCE
     sources = {
         { name = "nvim_lsp"},
         { name = "nvim_lua"},
