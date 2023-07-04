@@ -9,9 +9,6 @@ vim.g.mapleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
--- Trick: paste word in the next line
--- use "o<Alt + p>", alt will exit insert_mode to exe command
-
 -- move and delete buffer
 vim.keymap.set('n', '<C-h>', '<cmd>bp<CR>')
 vim.keymap.set('n', '<C-l>', '<cmd>bn<CR>')
@@ -26,9 +23,8 @@ vim.keymap.set("v", "p", '"_dP')
 vim.keymap.set("v", "<C-c>", 'y')
 -- smart copy: dirctly copy in insert_mode
 vim.keymap.set("i", "<M-p>", '<C-r>+')
-
--- use q to quit neovim
-vim.keymap.set("n", "q" ,"<cmd>q<CR>")
+-- delete and not yank
+vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 -- convenient to move to the begin/end of line
 vim.keymap.set("", "H" ,"^")
@@ -55,17 +51,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
--- delete and not yank
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
-
 -- tmux use
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
-
--- Qucikfix and Location list
--- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
--- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
--- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
--- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 -- add exe to this file
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
@@ -74,3 +61,5 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
+-- cancel "q:" key to enter command_mode
+vim.keymap.set("n", "q:", "<nop>")

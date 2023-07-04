@@ -32,18 +32,3 @@ vim.opt.clipboard = "unnamedplus"
 
 -- set '-' '<' '>' as a letter
 vim.cmd [[set iskeyword+=-]]
-vim.cmd [[set iskeyword+=<]]
-vim.cmd [[set iskeyword+=>]]
-
--- disable netrw's gx mapping
-vim.g.netrw_nogx = 1
-
--- Open help window in a vertical split to the right.
-vim.api.nvim_create_autocmd("BufWinEnter", {
-    group = vim.api.nvim_create_augroup("help_window_right", {}),
-    pattern = { "*" },
-    callback = function()
-        if vim.o.filetype == 'help' or vim.o.filetype == 'man' then vim.cmd.wincmd("L") end
-    end
-})
-
