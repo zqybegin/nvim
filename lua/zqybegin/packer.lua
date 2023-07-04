@@ -47,6 +47,7 @@ return packer.startup(function(use)
     use({ "rose-pine/neovim", as = "rose-pine" })
     use "folke/tokyonight.nvim"
     use "daschw/leaf.nvim"
+    use "navarasu/onedark.nvim"
 
     -- basic plugins
     use "nvim-lua/popup.nvim"           -- An implementation of the Popup API from vim in Neovim
@@ -79,12 +80,11 @@ return packer.startup(function(use)
     use "tyru/open-browser.vim"    -- open link in browser
     use "dstein64/vim-startuptime" -- view stratup time
 
-
     -- UI plugin
     use "lukas-reineke/indent-blankline.nvim"  -- show indent blankline
     use "ntpeters/vim-better-whitespace"  -- better handling of whitespace characters
     -- use "yamatsum/nvim-cursorline"  will error in nvimtree rename -- underline the word under the cursor
-    use "RRethy/vim-illuminate"         -- highlight the word under the cursor
+    -- use "RRethy/vim-illuminate"         -- highlight the word under the cursor
     use "lfv89/vim-interestingwords"    -- highlight word in the buffer
 
     -- nvim tree and bufferline

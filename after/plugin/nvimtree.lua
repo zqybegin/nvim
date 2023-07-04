@@ -12,7 +12,7 @@ nvim_tree.setup {
     view = {
         -- A table indicates that the view should be dynamically sized based on the longest line
         width = {
-            min = 25,
+            min = 5,
             max = 35,
         },
     },

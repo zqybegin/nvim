@@ -15,6 +15,8 @@ end
 local servers = {
     "lua_ls",
     "svlangserver",
+    "clangd",
+    "cmake",
 }
 
 mason_lspconfig.setup({

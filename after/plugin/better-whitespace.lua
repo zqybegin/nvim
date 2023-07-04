@@ -5,7 +5,10 @@ vim.cmd[[highlight ExtraWhitespace guibg='#61AFEF']]
 
 -- enable highlighting and stripping whitespace on save by default
 vim.g.better_whitespace_enabled = 1
-vim.g.strip_whitespace_on_save = 1
+
+-- bug :https://github.com/ntpeters/vim-better-whitespace/issues/127
+-- vim.g.strip_whitespace_on_save = 1
+vim.cmd("autocmd BufWritePre * :StripWhitespace")
 
 -- disable automatically stripping whitespace for large files,
 vim.g.strip_max_file_size = 1000

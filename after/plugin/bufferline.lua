@@ -96,23 +96,23 @@ bufferline.setup {
         --     return buffer_a.modified > buffer_b.modified
         -- end
     },
-    highlights = {
-        fill = {
-            bg = rose_highlights.highlight_med,
-        },
-        separator_selected = {
-            fg = rose_highlights.highlight_med,
-        },
-        separator_visible = {
-            fg = rose_highlights.highlight_med,
-        },
-        separator = {
-            fg = rose_highlights.highlight_med,
-        },
-        offset_separator = {
-            fg = rose_highlights.highlight_med,
-        },
-    --     --  Other buffers which are not visible or don't have cursor
+    -- highlights = {
+    --     fill = {
+    --         bg = rose_highlights.highlight_med,
+    --     },
+    --     separator_selected = {
+    --         fg = rose_highlights.highlight_med,
+    --     },
+    --     separator_visible = {
+    --         fg = rose_highlights.highlight_med,
+    --     },
+    --     separator = {
+    --         fg = rose_highlights.highlight_med,
+    --     },
+    --     offset_separator = {
+    --         fg = rose_highlights.highlight_med,
+    --     },
+    -- --     --  Other buffers which are not visible or don't have cursor
     --     background = {
     --         fg = "#908caa",
     --         bg = { attribute = "bg", highlight = "Comment" }
@@ -152,6 +152,6 @@ bufferline.setup {
     --     --     sp = "#ea9a97",
     --     --     -- bg = { attribute = "bg", highlight = "Comment" }
     --     -- },
-    };
+    -- };
 }
 vim.keymap.set("n","<leader><leader>s","<cmd>w<CR><cmd>so<CR><cmd>PackerCompile<CR>")
