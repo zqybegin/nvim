@@ -1,0 +1,15 @@
+{
+    "name": "my-cool-snippets",
+    "contributes": {
+        "snippets": [
+            {
+                "language": "all",
+                "path": "./snippts/c.json"
+            },
+            {
+				"language": "verilog" ,
+                "path": "./snippts/verilog.json"
+			}
+        ]
+    }
+}

@@ -10,3 +10,5 @@ let g:tagbar_indent = 1
 let g:tagbar_show_visibility = 0
 " change word
 let g:tagbar_iconchars = ['▶', '▼']
+" change cursor highlight
+highlight TagbarHighlight ctermfg=0 ctermbg=11 guifg=#2c2d30 guibg=Grey
