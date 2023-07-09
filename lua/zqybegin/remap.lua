@@ -15,10 +15,10 @@ vim.keymap.set('n', '<C-l>', '<cmd>bn<CR>')
 vim.keymap.set('n', '<C-q>', '<cmd>BufDel<CR>')
 
 -- replace the action of "p" with "P"
-vim.keymap.set('', 'p', 'P', { noremap = true })
-vim.keymap.set('', 'P', 'p', { noremap = true })
+-- vim.keymap.set('', 'p', 'P', { noremap = true })
+-- vim.keymap.set('', 'P', 'p', { noremap = true })
 -- smart copy: select the text that needs to be replaced
-vim.keymap.set("v", "p", '"_dP')
+-- vim.keymap.set("v", "p", '"_dP')
 -- smart copy: align with mouse copying in tmux
 vim.keymap.set("v", "<C-c>", 'y')
 -- smart copy: dirctly copy in insert_mode
@@ -62,4 +62,4 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- cancel "q:" key to enter command_mode
-vim.keymap.set("n", "q:", "<nop>")
+vim.keymap.set("", "q:", "<nop>")

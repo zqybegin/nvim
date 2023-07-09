@@ -27,6 +27,8 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
+vim.wo.cursorline = true
+
 -- copy to system clipborad
 vim.opt.clipboard = "unnamedplus"
 

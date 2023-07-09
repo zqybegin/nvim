@@ -35,15 +35,16 @@ which_key.setup{
 
 which_key.register({
     ["u"]  = {"<cmd>UndotreeToggle<CR>", "UndoTree" },
-    ["s"]  = {[[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gcI<Left><Left><Left><Left>]], "Amazing Replace" },
+    ["s"]  = {[[:%s#\<<C-r><C-w>\>#<C-r><C-w>#gcI<Left><Left><Left><Left>]], "Amazing Replace" },
     ["w"] = { "<cmd>SmartSave<CR>","Wirte and Source this file" },
     ["i"] = { "<cmd>IconPickerNormal<CR>","insert text icon" },
     ["q"] = { "<cmd>xa<CR>","exit nvim" },
     ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>","Search file" },
+    ["l"] = {":TagbarToggle<CR>", "toggle tagbar"},
 
     p = {
         name = "Fuzzy find",
-        f = { "<cmd>Telescope find_files<CR>", "Search Files" },
+        f = { "<cmd>lua require(\"telescope.builtin\").find_files({no_ignore=true})<CR>", "Search Files" },
         s = { function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })end, "Search Symbol" },
         h = { "<cmd>Telescope help_tags<CR>", "open help" },
         m = { "<cmd>Telescope man_pages<CR>", "open man" },
@@ -100,7 +101,7 @@ which_key.register({
 })
 
 which_key.register({
-    ["s"]  = {[["hy:%s/<C-r>h/<C-r>h/gcI<left><left><left><left>]], "Amazing Replace"},
+    ["s"]  = {[["hy:%s#<C-r>h#<C-r>h#gcI<left><left><left><left>]], "Amazing Replace"},
 },{
     mode = "v", -- NORMAL mode
     prefix = "<leader>",

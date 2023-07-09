@@ -72,6 +72,8 @@ return packer.startup(function(use)
             }
         end,
     }
+    use "preservim/tagbar" -- show the outline fucntion of this file
+
     -- useful(useless) plugin
     use "akinsho/toggleterm.nvim"  -- toggle and presist terminal
     use "folke/which-key.nvim"     -- help to remember the meaning of key

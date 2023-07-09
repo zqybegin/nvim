@@ -1,4 +1,3 @@
-* open so slow
 * add all key to a table and Ctrl handle with buffer
 
 * use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
@@ -13,3 +12,6 @@
 * use 'windwp/nvim-spectre' -- 媲美 vscode 的多文件替换
 * use 'andymass/vim-matchup' -- 高亮匹配的元素，例如 #if 和 #endif
 * use 'martins3/fcitx.nvim' -- 自动切换输入法
+
+* add struct define in vim.lsp.buf.hover()
+* packer manage to lazy
