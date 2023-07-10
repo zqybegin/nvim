@@ -73,6 +73,7 @@ return packer.startup(function(use)
         end,
     }
     use "preservim/tagbar" -- show the outline fucntion of this file
+    use {'kevinhwang91/nvim-ufo', requires = {'kevinhwang91/promise-async', 'luukvbaal/statuscol.nvim'}} -- make Neovim's fold look modern and keep high performance
 
     -- useful(useless) plugin
     use "akinsho/toggleterm.nvim"  -- toggle and presist terminal
