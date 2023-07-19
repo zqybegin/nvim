@@ -8,11 +8,7 @@ null_ls.setup({
     sources = {
         null_ls.builtins.formatting.verible_verilog_format,
         null_ls.builtins.diagnostics.shellcheck,
-        null_ls.builtins.formatting.clang_format.with({
-            extra_args = {
-                TabWidth = 4,
-            }
-        }),
+        null_ls.builtins.formatting.clang_format,
     },
 })
 
