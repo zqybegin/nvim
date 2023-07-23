@@ -44,7 +44,7 @@ which_key.register({
 
     p = {
         name = "Fuzzy find",
-        f = { "<cmd>lua require(\"telescope.builtin\").find_files({no_ignore=true})<CR>", "Search Files" },
+        f = { "<cmd>lua require(\"telescope.builtin\").find_files({no_ignore=true,no_ignore=true})<CR>", "Search Files" },
         s = { function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") })end, "Search Symbol" },
         h = { "<cmd>Telescope help_tags<CR>", "open help" },
         m = { "<cmd>Telescope man_pages<CR>", "open man" },
