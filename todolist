@@ -15,3 +15,4 @@
 
 * add struct define in vim.lsp.buf.hover()
 * packer manage to lazy
+* make telescope grep string show better
