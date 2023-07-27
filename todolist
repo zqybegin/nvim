@@ -16,3 +16,5 @@
 * add struct define in vim.lsp.buf.hover()
 * packer manage to lazy
 * make telescope grep string show better
+非常规的正则表达式语法是指使用了\v标记来开启"very magic"模式
+lu zhi hong
