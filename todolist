@@ -1,4 +1,4 @@
-* add all key to a table and Ctrl handle with buffer
+*  add all key to a table and Ctrl handle with buffer
 
 * use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 * use 'rhysd/git-messenger.vim' -- 利用 git blame 显示当前行的 commit message
@@ -18,3 +18,5 @@
 * make telescope grep string show better
 非常规的正则表达式语法是指使用了\v标记来开启"very magic"模式
 lu zhi hong
+* tagbar vim config
+treesitter
