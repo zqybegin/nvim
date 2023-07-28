@@ -1,4 +1,9 @@
 {
+    "fn": {
+        "prefix": "opo",
+        "body": ["Hello World"],
+        "description": "If statement"
+    },
     "if": {
         "prefix": "if",
         "body": ["if (${1}) begin", "${0}", "end"],

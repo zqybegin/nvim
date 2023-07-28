@@ -3,5 +3,5 @@
         "prefix": "opo",
         "body": ["Hello World"],
         "description": "If statement"
-    },
+    }
 }

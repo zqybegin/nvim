@@ -1,5 +1,6 @@
 -- define <leader> key as space
-vim.g.mapleader = " "
+-- use lazy as package manager, so need define <leader> in Lazy.lua
+-- vim.g.mapleader = " "
 
 -- Modes
 --   normal_mode = "n",

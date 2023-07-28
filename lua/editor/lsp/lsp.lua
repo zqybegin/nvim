@@ -4,11 +4,11 @@ local M = {
     event = { "BufReadPre" },
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
+        "williamboman/mason.nvim",
     },
 }
 
 function M.config()
-
     local cmp_nvim_lsp = require("cmp_nvim_lsp");
     local lspconfig = require("lspconfig");
 

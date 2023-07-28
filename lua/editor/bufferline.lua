@@ -1,6 +1,7 @@
 local M = {
     "akinsho/bufferline.nvim", -- bufferline control
-    event = { "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
+    -- event = { "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
+    event = "VimEnter",
     dependencies = {
         "ojroques/nvim-bufdel",     -- close buffer gently
         -- "moll/vim-byye", will be comfict with nvim-ts-rainbow

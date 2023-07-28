@@ -57,5 +57,3 @@ require("lazy").setup({
         },
     },
 })
-
-    -- -- "windwp/nvim-autopairs",    -- Autopairs, integrates with both cmp and treesitter
