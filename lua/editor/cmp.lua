@@ -1,6 +1,6 @@
 local M = {
     "hrsh7th/nvim-cmp", -- The completion plugin
-    event = { "InsertEnter", "CmdlineEnter", },
+    event = { "InsertEnter" },
     dependencies = {
         "hrsh7th/cmp-buffer",       -- source of buffer completions
         "hrsh7th/cmp-path",         -- source of path completions

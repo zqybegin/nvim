@@ -1,6 +1,6 @@
 local M = {
     "akinsho/toggleterm.nvim",
-    event = "VeryLazy",
+    keys = [[<c-\>]],
 }
 
 function M.config()

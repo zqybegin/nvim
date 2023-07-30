@@ -1,6 +1,8 @@
 local M = {
     "nvim-treesitter/nvim-treesitter",
-    event = "BufReadPost",
+    build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
+    cmd = { "TSUpdateSync" },
     dependencies = {
         "nvim-treesitter/nvim-treesitter-context",
         "p00f/nvim-ts-rainbow", -- show rainbow color

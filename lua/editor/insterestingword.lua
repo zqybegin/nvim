@@ -1,6 +1,6 @@
 local M = {
     "lfv89/vim-interestingwords",    -- highlight word in the buffer
-    event = { "BufRead", "BufNewFile" },
+    event =  "VeryLazy" ,
 }
 
 function M.config()

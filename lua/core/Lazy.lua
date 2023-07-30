@@ -40,7 +40,6 @@ require("lazy").setup({
         version = false, -- always use the latest git commit
         -- version = "*", -- try installing the latest stable version for plugins that support semver
     },
-    checker = { enabled = true }, -- automatically check for plugin updates
     performance = {
         rtp = {
             -- disable some rtp plugins
@@ -55,5 +54,12 @@ require("lazy").setup({
                 -- "zipPlugin",
             },
         },
+    },
+    checker = {
+        -- automatically check for plugin updates
+        enabled = false,
+        concurrency = nil, ---@type number? set to 1 to check for updates very slowly
+        notify = true, -- get a notification when new updates are found
+        frequency = 3600, -- check for updates every hour
     },
 })

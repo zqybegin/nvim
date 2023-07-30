@@ -50,9 +50,9 @@ function M.config()
         ["i"] = { "<cmd>IconPickerNormal<CR>", "insert text icon" },
         ["q"] = { "<cmd>xa<CR>", "exit nvim" },
         ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>", "Search file" },
-        ["l"] = { ":TagbarToggle<CR>", "toggle tagbar" },
+        ["l"] = { "<cmd>TagbarToggle<CR>", "toggle tagbar" },
 
-                -- InterestingWords plugin
+        -- InterestingWords plugin
         ["h"] = { "<cmd>call InterestingWords('n')<CR>", "highlight word" },
 
         -- LSP control
@@ -65,10 +65,8 @@ function M.config()
         ["p"]= {
             name = "+Fuzzy find",
             f = {
-                "<cmd>lua require(\"telescope.builtin\").find_files({hidden=true,no_ignore=true,path_display = {\"truncate\"}})<CR>",
-                "Search Files" },
-            s = { function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") }) end,
-                "Search Symbol" },
+                "<cmd>lua require(\"telescope.builtin\").find_files({ hidden=true, no_ignore=true, path_display = {\"truncate\"}})<CR>", "Search Files" },
+            s = { function() require('telescope.builtin').grep_string({ search = vim.fn.input("Grep > ") }) end, "Search Symbol" },
             h = { "<cmd>Telescope help_tags<CR>", "open help" },
             m = { "<cmd>Telescope man_pages<CR>", "open man" },
         },
@@ -76,7 +74,6 @@ function M.config()
             name = "+file tree",
             o = { "<cmd>NvimTreeFindFile<CR>", "open file in dir" },
             t = { "<cmd>NvimTreeToggle<CR>", "toggle file tree" },
-            s = { "<cmd>SudaWrite<CR>", "sudo write file" }
         },
 
         -- Git:https://github.com/lewis6991/gitsigns.nvim#keymaps
@@ -103,7 +100,6 @@ function M.config()
             D = { "<cmd>lua vim.lsp.buf.declaration()<CR>", "goto function declaration" },
             i = { "<cmd>lua vim.lsp.buf.implementation()<CR>", "goto function implementation" },
             r = { "<cmd>lua vim.lsp.buf.references()<CR>", "goto function references" },
-            x = { "<Plug>(openbrowser-smart-search)", "goto link" },
         },
         K = { "<cmd>lua vim.lsp.buf.hover()<CR>", "show diagnostic hover" },
         --vim.cmd [[ command! format execute 'lua vim.lsp.buf.formatting()' ]]

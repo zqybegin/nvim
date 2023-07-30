@@ -1,6 +1,6 @@
 local M = {
     "ziontee113/icon-picker.nvim", -- help you pick text icon
-    event = "VeryLazy",
+    cmd = "IconPickerNormal",
     dependencies = {
         "stevearc/dressing.nvim", -- icon picker needed
     },

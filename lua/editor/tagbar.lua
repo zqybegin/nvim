@@ -1,6 +1,6 @@
 local M = {
     "preservim/tagbar", -- show the outline fucntion of this file
-    event = { "BufRead", "BufNewFile" },
+    cmd = { "TagbarToggle" },
 }
 
 function M.config()
