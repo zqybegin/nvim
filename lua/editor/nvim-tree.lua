@@ -1,6 +1,7 @@
 local M = {
     "kyazdani42/nvim-tree.lua",
-    cmd = { "NvimTreeFindFile", "NvimTreeToggle" },
+    -- event = "VimEnter",
+    lazy = false,
     dependencies = {
         "nvim-tree/nvim-web-devicons",     -- file tree icon
     },
