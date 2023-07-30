@@ -59,7 +59,41 @@ require("lazy").setup({
         -- automatically check for plugin updates
         enabled = false,
         concurrency = nil, ---@type number? set to 1 to check for updates very slowly
-        notify = true, -- get a notification when new updates are found
+        notify = true,    -- get a notification when new updates are found
         frequency = 3600, -- check for updates every hour
+    },
+    ui = {
+        -- a number <1 is a percentage., >1 is a fixed size
+        size = { width = 0.8, height = 0.8 },
+        wrap = true, -- wrap the lines in the ui
+        -- The border to use for the UI window. Accepts same border values as |nvim_open_win()|.
+        border = "rounded",
+        title = nil, ---@type string only works when border is not "none"
+        title_pos = "center", ---@type "center" | "left" | "right"
+        -- Show pills on top of the Lazy window
+        pills = true, ---@type boolean
+        icons = {
+            cmd = " ",
+            config = "",
+            event = "",
+            ft = " ",
+            init = " ",
+            import = " ",
+            keys = " ",
+            lazy = "󰒲 ",
+            loaded = "●",
+            not_loaded = "○",
+            plugin = " ",
+            runtime = " ",
+            source = " ",
+            start = "",
+            task = "✔ ",
+            list = {
+                "●",
+                "➜",
+                "★",
+                "‒",
+            },
+        },
     },
 })
