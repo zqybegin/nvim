@@ -50,10 +50,10 @@ vim.api.nvim_create_autocmd({ "VimResized" }, {
 })
 
 -- When switch insert, disable notify
-vim.api.nvim_create_autocmd({ "InsertEnter" }, {
-    group = vim.api.nvim_create_augroup("NotifyClearGrp", {}),
-    pattern = "*",
-    callback = function()
-        require("notify").dismiss({ silent = true })
-    end
-})
+-- vim.api.nvim_create_autocmd({ "InsertEnter" }, {
+--     group = vim.api.nvim_create_augroup("NotifyClearGrp", {}),
+--     pattern = "*",
+--     callback = function()
+--         require("notify").dismiss({ silent = true })
+--     end
+-- })
