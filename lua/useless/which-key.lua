@@ -49,7 +49,7 @@ function M.config()
         ["w"] = { "<cmd>SmartSave<CR>", "Wirte and Source this file" },
         ["i"] = { "<cmd>IconPickerNormal<CR>", "insert text icon" },
         ["q"] = { "<cmd>xa<CR>", "exit nvim" },
-        ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR><cmd>Telescope find_files<CR>", "Search file" },
+        ["v"] = { "<cmd>vsplit<CR><cmd>wincmd l<CR>", "Search file" },
         ["l"] = { "<cmd>TagbarToggle<CR>", "toggle tagbar" },
 
         -- InterestingWords plugin
@@ -92,6 +92,20 @@ function M.config()
         noremap = true, -- use `noremap` when creating keymaps
         nowait = true,  -- use `nowait` when creating keymaps
     })
+
+    -- LSP mappings
+    -- vim.keymap.set("n", "gd",  vim.lsp.buf.definition)
+    -- vim.keymap.set("n", "K",   vim.lsp.buf.hover)
+    -- vim.keymap.set("n", "gi",  vim.lsp.buf.implementation)
+    -- vim.keymap.set("n", "gr",  vim.lsp.buf.references)
+    -- vim.keymap.set("n", "gds", vim.lsp.buf.document_symbol)
+    -- vim.keymap.set("n", "gws", vim.lsp.buf.workspace_symbol)
+    -- vim.keymap.set("n", "<leader>cl", vim.lsp.codelens.run)
+    -- vim.keymap.set("n", "<leader>sh", vim.lsp.buf.signature_help)
+    -- vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+    -- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+    -- vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+
 
     which_key.register({
         g = {
