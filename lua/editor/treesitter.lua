@@ -11,7 +11,7 @@ local M = {
 function M.config()
     require("nvim-treesitter.configs").setup {
         -- A list of parser names, or "all"
-        ensure_installed = { "verilog", "vimdoc", "c", "lua" },
+        ensure_installed = { "verilog", "vimdoc", "c", "lua", "scala"},
         -- Install parsers synchronously (only applied to `ensure_installed`)
         sync_install = true,
 
