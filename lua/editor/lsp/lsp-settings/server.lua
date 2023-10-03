@@ -1,10 +1,10 @@
 local M = {}
 
 M.servers = {
-    "lua_ls",
     "svlangserver",
     "clangd",
     "cmake",
+    "lua_ls",
 }
 
 return M
