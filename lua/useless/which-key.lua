@@ -45,6 +45,7 @@ function M.config()
 
     which_key.register({
         ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
+        ["a"] = { "gg0vG$", "Select All text" },
         ["s"] = { [[:%s#\<<C-r><C-w>\>#<C-r><C-w>#gcI<Left><Left><Left><Left>]], "Amazing Replace" },
         ["w"] = { "<cmd>SmartSave<CR>", "Wirte and Source this file" },
         ["i"] = { "<cmd>IconPickerNormal<CR>", "insert text icon" },
