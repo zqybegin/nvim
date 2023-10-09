@@ -5,6 +5,7 @@ local M = {
     cmd = { "TSUpdateSync" },
     dependencies = {
         "nvim-treesitter/nvim-treesitter-context",
+        "rush-rs/tree-sitter-asm", --support assembly
         "p00f/nvim-ts-rainbow", -- show rainbow color
     },
 }
@@ -43,6 +44,14 @@ function M.config()
             -- colors = {}, -- table of hex strings
             -- termcolors = {} -- table of colour name strings
         }
+    }
+
+    require('nvim-treesitter.parsers').get_parser_configs().asm = {
+        install_info = {
+            url = 'https://github.com/rush-rs/tree-sitter-asm.git',
+            files = { 'src/parser.c' },
+            branch = 'main',
+        },
     }
 
     -- colors group set in rainbow
