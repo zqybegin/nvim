@@ -25,10 +25,10 @@ function M.config()
         diagnostics = {
             enable = true,
             icons = {
-                hint = "",
-                info = "",
-                warning = "",
-                error = "",
+                hint = "",
+                info = "󰰂",
+                warning = "",
+                error = "",
             },
         },
         git = {
@@ -51,7 +51,7 @@ function M.config()
                         staged = "✓",
                         unmerged = "",
                         renamed = "➜",
-                        deleted = "",
+                        deleted = "󰆴",
                         untracked = "υ",
                         ignored = "◌",
                     },
